@@ -10,6 +10,7 @@ public class Payment {
 
     Boolean isPaymentCompleted;
 
+    @Enumerated(value = EnumType.STRING)
     PaymentMode paymentMode;
 
     @OneToOne(mappedBy = "payment",cascade = CascadeType.ALL)
@@ -27,10 +28,9 @@ public class Payment {
         this.reservation = reservation;
     }
 
-    public void isPaymentCompleted(Boolean paymentCompleted,Reservation reservation){
+    public Boolean isPaymentCompleted(){
 
-        this.isPaymentCompleted=paymentCompleted;
-        this.reservation = reservation;
+        return this.isPaymentCompleted;
 
     }
 
