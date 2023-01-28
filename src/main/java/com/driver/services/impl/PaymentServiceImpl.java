@@ -34,9 +34,11 @@ public class PaymentServiceImpl implements PaymentService {
         }
 
         if(reservation.getBillAmount()==amountSent){
-            payment.setIsPaymentCompleted(true);
+            payment.isPaymentCompleted(true,reservation);
+        }else{
+            throw new Exception("Insufficient Amount");
         }
-        payment.setReservation(reservation);
+//        payment.setReservation(reservation);
         reservation.setPayment(payment);
         reservationRepository2.save(reservation);
         paymentRepository2.save(payment);

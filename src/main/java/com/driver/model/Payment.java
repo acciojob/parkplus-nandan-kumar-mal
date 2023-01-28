@@ -26,6 +26,13 @@ public class Payment {
         this.reservation = reservation;
     }
 
+    public void isPaymentCompleted(Boolean paymentCompleted,Reservation reservation){
+
+        this.isPaymentCompleted=paymentCompleted;
+        this.reservation = reservation;
+
+    }
+
 
     public int getId() {
         return id;
