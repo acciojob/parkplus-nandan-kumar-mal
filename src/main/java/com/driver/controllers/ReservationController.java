@@ -26,7 +26,7 @@ public class ReservationController {
             return reservation;
 
         }catch (Exception e){
-            throw new Exception("Cannot make reservation");
+            throw new RuntimeException(e);
         }
 
 
