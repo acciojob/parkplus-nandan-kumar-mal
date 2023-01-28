@@ -33,12 +33,8 @@ public class PaymentServiceImpl implements PaymentService {
             throw new Exception("Payment mode not detected");
         }
 
-        if(reservation.getBillAmount()==amountSent){
-            payment.setIsPaymentCompleted(true);
-        }else{
-            throw new Exception("Insufficient Amount");
-        }
-//        payment.setReservation(reservation);
+        payment.setIsPaymentCompleted(true);
+        payment.setReservation(reservation);
         reservation.setPayment(payment);
         reservationRepository2.save(reservation);
         paymentRepository2.save(payment);
