@@ -1,7 +1,6 @@
 package com.driver.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "payment")
@@ -13,6 +12,8 @@ public class Payment {
 
     PaymentMode paymentMode;
 
+    @OneToOne(mappedBy = "payment",cascade = CascadeType.ALL)
+    @JoinColumn
     Reservation reservation;
 
     public Payment(){
