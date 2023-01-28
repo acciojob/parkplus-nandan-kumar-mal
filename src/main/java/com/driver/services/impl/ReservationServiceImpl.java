@@ -51,7 +51,7 @@ public class ReservationServiceImpl implements ReservationService {
                     }
                 }
                 reservation.setSpot(spot);
-                reservation.setNoOfHours(timeInHours);
+                reservation.setNumberOfHours(timeInHours);
                 reservation.setUser(user);
                 reservation.setBillAmount(spot.getPricePerHour() * timeInHours);
 

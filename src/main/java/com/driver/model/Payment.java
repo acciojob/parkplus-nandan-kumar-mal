@@ -1,7 +1,5 @@
 package com.driver.model;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -11,7 +9,7 @@ public class Payment {
 
     private int id;
 
-    Boolean paymentCompleted;
+    Boolean isPaymentCompleted;
 
     PaymentMode paymentMode;
 
@@ -21,9 +19,9 @@ public class Payment {
 
     }
 
-    public Payment(Boolean paymentCompleted,PaymentMode paymentMode,Reservation reservation){
+    public Payment(Boolean isPaymentCompleted, PaymentMode paymentMode, Reservation reservation){
 
-        this.paymentCompleted = paymentCompleted;
+        this.isPaymentCompleted = isPaymentCompleted;
         this.paymentMode = paymentMode;
         this.reservation = reservation;
     }
@@ -37,12 +35,12 @@ public class Payment {
         this.id = id;
     }
 
-    public Boolean getPaymentCompleted() {
-        return paymentCompleted;
+    public Boolean getIsPaymentCompleted() {
+        return isPaymentCompleted;
     }
 
-    public void setPaymentCompleted(Boolean paymentCompleted) {
-        this.paymentCompleted = paymentCompleted;
+    public void setIsPaymentCompleted(Boolean isPaymentCompleted) {
+        this.isPaymentCompleted = isPaymentCompleted;
     }
 
     public PaymentMode getPaymentMode() {

@@ -8,7 +8,7 @@ public class Reservation {
 
     private int id;
 
-    private int noOfHours;
+    private int NumberOfHours;
 
 
     private int billAmount;
@@ -29,8 +29,8 @@ public class Reservation {
 
     }
 
-    public Reservation(int noOfHours,int billAmount){
-        this.noOfHours = noOfHours;
+    public Reservation(int NumberOfHours, int billAmount){
+        this.NumberOfHours = NumberOfHours;
         this.billAmount = billAmount;
 
     }
@@ -45,12 +45,12 @@ public class Reservation {
         this.id = id;
     }
 
-    public int getNoOfHours() {
-        return noOfHours;
+    public int getNumberOfHours() {
+        return NumberOfHours;
     }
 
-    public void setNoOfHours(int noOfHours) {
-        this.noOfHours = noOfHours;
+    public void setNumberOfHours(int numberOfHours) {
+        this.NumberOfHours = numberOfHours;
     }
 
     public User getUser() {

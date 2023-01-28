@@ -34,7 +34,7 @@ public class PaymentServiceImpl implements PaymentService {
         }
 
         if(reservation.getBillAmount()==amountSent){
-            payment.setPaymentCompleted(true);
+            payment.setIsPaymentCompleted(true);
         }
         payment.setReservation(reservation);
         reservation.setPayment(payment);
